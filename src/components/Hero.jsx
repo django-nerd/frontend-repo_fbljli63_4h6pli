@@ -3,12 +3,12 @@ import TotemGold from './TotemGold'
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[86vh] flex items-center justify-center overflow-hidden">
       {/* Ivory backdrop */}
-      <div className="absolute inset-0 bg-[#F6F1E7]" />
+      <div className="absolute inset-0 bg-[var(--ivory)]" />
 
       {/* Watermark motif */}
-      <TotemGold className="absolute -right-20 -top-24 w-[420px] h-[420px] opacity-20" />
+      <TotemGold className="absolute -right-16 -top-24 w-[440px] h-[440px] opacity-20" />
       <TotemGold className="absolute -left-24 bottom-0 w-[360px] h-[360px] opacity-15" />
 
       {/* Subtle grain and vignette */}
@@ -17,18 +17,25 @@ const Hero = () => {
         mixBlendMode: 'multiply'
       }} />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-        <div className="inline-flex items-center gap-2 text-[13px] tracking-[0.25em] uppercase text-[#b18b2e]/90 mb-6">
-          <span className="h-px w-10 bg-[#b18b2e]/40" />
-          Portfolio • Art • Story
-          <span className="h-px w-10 bg-[#b18b2e]/40" />
+      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+        <div className="inline-flex items-center gap-2 text-[12px] tracking-[0.28em] uppercase text-[#b18b2e]/90 mb-6">
+          <span className="h-px w-10 gold-line opacity-50" />
+          Crafted Portfolio • Writing • Film • Art
+          <span className="h-px w-10 gold-line opacity-50" />
         </div>
-        <h1 className="text-5xl md:text-6xl leading-tight text-[#3a2f20] font-serif tracking-tight">
-          A curated journey through writing, film, drawing, and photographs
+        <h1 className="serif-luxe text-5xl md:text-6xl leading-tight text-[var(--ink)] tracking-tight">
+          Pages that breathe. Stories that glow.
         </h1>
-        <p className="mt-6 text-lg md:text-xl text-[#5a4a34]/90 max-w-3xl mx-auto">
-          Minimal form. Cultural resonance. Crafted like a luxury art book—each page a quiet room for the work to breathe.
+        <p className="mt-6 text-lg md:text-xl text-[color:var(--ink-soft)] max-w-3xl mx-auto">
+          Minimal form with cultural resonance—like a sunlit atelier on ivory paper, each work framed with quiet care.
         </p>
+
+        {/* Signature line */}
+        <div className="mt-8 flex items-center justify-center gap-3">
+          <span className="h-px w-14 gold-line rounded-full" />
+          <span className="uppercase tracking-[0.22em] text-xs text-[#a8842a]">portfolio of works</span>
+          <span className="h-px w-14 gold-line rounded-full" />
+        </div>
       </div>
 
       {/* Corner emboss details */}

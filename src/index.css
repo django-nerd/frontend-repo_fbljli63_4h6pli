@@ -10,16 +10,38 @@
     --font-mona: 'Mona Sans', system-ui, sans-serif;
     --font-ibm-plex: 'IBM Plex Sans', system-ui, sans-serif;
     --font-manrope: 'Manrope', system-ui, sans-serif;
+    --font-serif-luxe: 'Cormorant Garamond', Georgia, "Times New Roman", serif;
+
+    --ivory: #F6F1E7;
+    --ink: #3a2f20;
+    --ink-soft: #5a4a34;
+    --gold-1: #E6C972;
+    --gold-2: #D4AF37;
+    --gold-3: #B88924;
   }
 
   html {
     font-family: var(--font-sans);
     font-feature-settings: "rlig" 1, "calt" 1;
+    background: var(--ivory);
   }
 
   body {
     @apply antialiased;
+    color: var(--ink);
   }
+}
+
+/* Brand utilities */
+@layer components {
+  .serif-luxe { font-family: var(--font-serif-luxe); }
+  .gold-text {
+    background: linear-gradient(90deg, var(--gold-1), var(--gold-2), var(--gold-3));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .gold-line { background: linear-gradient(90deg, var(--gold-1), var(--gold-2), var(--gold-3)); }
 }
 
 /* Custom utility classes for shadcn/ui patterns */

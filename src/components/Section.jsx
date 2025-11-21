@@ -8,9 +8,9 @@ const Section = ({ title, description, children }) => {
       }} />
       <div className="relative max-w-6xl mx-auto px-6">
         <div className="mb-10">
-          <h2 className="text-3xl md:text-4xl text-[#3a2f20] font-serif tracking-tight">{title}</h2>
+          <h2 className="serif-luxe text-3xl md:text-4xl text-[var(--ink)] tracking-[-0.01em]">{title}</h2>
           {description && (
-            <p className="mt-3 text-[#5a4a34]/90 max-w-3xl">{description}</p>
+            <p className="mt-3 text-[color:var(--ink-soft)]/90 max-w-3xl">{description}</p>
           )}
         </div>
         <div className="grid gap-8 md:gap-10">
